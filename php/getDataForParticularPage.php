@@ -1,19 +1,11 @@
 <?php
 
-if(empty($_GET["query"]) or isset($_GET["query"]) and $_GET["query"]==""){
-    $query = '';
-}
-else{
-    $query = $_GET["query"];
-}
+print_r($_REQUEST);
+exit();
 
-if(empty($_GET["page"]) or isset($_GET["page"]) and $_GET["page"]==""){
-    $page =1;
-}
-else{
-    $page = $_GET["page"];
-}
-
+$queryRequest = file_get_contents("php://input");
+$query = "vfs";
+$page = "432";
 $servername = "*";
 $username = "*";
 $password = "*";
@@ -27,6 +19,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$queryRequest = mysqli_real_escape_string($conn, trim($queryRequest));
+
+if(ctype_digit($page) ){
+    $page=1;
+}
 $rowIndex = 10 * $page;
 $query = mysqli_real_escape_string($conn, trim($query));
 $sql = "SELECT name,
@@ -48,4 +45,6 @@ $conn->close();
 header('Content-Type: application/json');
 $json = json_encode($output);
 echo $json;
+
+
 exit();

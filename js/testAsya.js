@@ -1,8 +1,10 @@
 var ajaxURL = 'php/getDataForParticularPage.php';
+
 $.ajax({
-    type: 'POST',
+    type: 'GET',
     url: ajaxURL,
-    dataType: 'text'
+    dataType: 'html',
+    data: 'query=' + 'ffff'
 }).done(function(result) {
     console.log(result);
 });
