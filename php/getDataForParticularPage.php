@@ -28,17 +28,13 @@ if ($conn->connect_error) {
 }
 
 $query = mysqli_real_escape_string($conn, trim($query));
-$sql = "SELECT *
-        FROM (SELECT ROW_NUMBER() OVER (ORDER BY OrderDate) AS RowNum,
-              name,
-              website
+$sql = "SELECT name,
+               website
         FROM companies
-        WHERE name like '%" . $query . "%'
+        WHERE name like '%' . $query . '%'
         ORDER BY name
-        ) AS RowConstrainedResult
-        WHERE   RowNum >= " . $page . "* 10 + 1
-        AND RowNum <= " . $page . "*10 + 10
-        ORDER BY RowNum";
+        LIMIT 10
+        OFFSET 10 * '' . $page . ''";
 $result = $conn->query($sql);
 $output = array();
 
