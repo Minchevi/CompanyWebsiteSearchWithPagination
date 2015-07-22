@@ -31,10 +31,10 @@ $query = mysqli_real_escape_string($conn, trim($query));
 $sql = "SELECT name,
                website
         FROM companies
-        WHERE name like '%' . $query . '%'
+        WHERE name like '%" . $query . "%'
         ORDER BY name
         LIMIT 10
-        OFFSET 10 * '' . $page . ''";
+        OFFSET 10 * " . $page ;
 $result = $conn->query($sql);
 $output = array();
 
