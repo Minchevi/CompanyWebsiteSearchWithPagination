@@ -38,10 +38,11 @@ if ($conn->connect_error) {
 $query = mysqli_real_escape_string($conn, trim($query));
 $page = mysqli_real_escape_string($conn, trim($page));
 
-if(ctype_digit($page) ){
+if(!ctype_digit($page) ){
     $page=1;
 }
-$rowIndex = 10 * $page;
+$rowIndex = 10 * ($page-1);
+echo $rowIndex;
 $sql = "SELECT name,
                website
         FROM companies
@@ -58,7 +59,6 @@ while(($row = $result->fetch_assoc())) {
 
 $conn->close();
 
-header('Content-Type: application/json');
 $json = json_encode($output);
 echo $json;
 
