@@ -39,7 +39,7 @@
 
 <?php
 
-include 'php/getPageAndQuery.php';
+include 'php/displayResults.php';
 
 ?>
 
@@ -48,6 +48,5 @@ include 'php/getPageAndQuery.php';
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/sendQuery.js"></script>
-<!--<script src="js/testAsya.js"></script>-->
 </body>
 </html>
