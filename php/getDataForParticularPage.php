@@ -27,6 +27,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$rowIndex = 10 * $page;
 $query = mysqli_real_escape_string($conn, trim($query));
 $sql = "SELECT name,
                website
@@ -34,7 +35,7 @@ $sql = "SELECT name,
         WHERE name like '%" . $query . "%'
         ORDER BY name
         LIMIT 10
-        OFFSET 10 * " . $page ;
+        OFFSET " . $rowIndex ;
 $result = $conn->query($sql);
 $output = array();
 
