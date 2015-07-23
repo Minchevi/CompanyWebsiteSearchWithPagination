@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
     <title>Companies</title>
 </head>
 <body>
 <h1 class="text-center">Company website searching tool</h1>
-<div class="container">
+<div class="container" id="search">
     <div class="row">
         <div id="custom-search-input">
             <div class="input-group col-md-12">
@@ -22,18 +24,17 @@
             </div>
         </div>
     </div>
-    <script>
-        var page=1;
-    </script>
-
-    <?php
-
-    include 'php/displayResults.php';
-
-    ?>
 </div>
 
+<?php
 
+include 'php/displayResults.php';
+
+?>
+
+<script>
+    var page=1;
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/sendQuery.js"></script>
 </body>
