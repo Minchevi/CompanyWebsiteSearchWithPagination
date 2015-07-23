@@ -38,3 +38,7 @@
 #search {
     margin-bottom: 20px;
 }
+
+.no-results-div {
+    text-align: center;
+}

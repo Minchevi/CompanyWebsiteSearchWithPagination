@@ -5,7 +5,7 @@ $myPage = intval($page) - 1;
 $maxPage = 10; // SHOULD GET THE MAXIMUM POSSIBLE PAGE USING SQL? :?
 
 
-echo '<div class="text-center">
+echo '<div class="text-center" id="pagination-div">
         <ul class="pagination" id="pagination-block">';
 
 echo '<li onclick="sendQuery()"><a href="#" onclick="page=1"> << </a></li>';
