@@ -22,30 +22,18 @@
             </div>
         </div>
     </div>
-    <table class="table" id="table-content">
+    <script>
+        var page=1;
+    </script>
 
-    </table>
+    <?php
 
-    <div class="text-center">
-        <ul class="pagination" id="pagination-block">
-            <li><a href="#" onclick="page=1">1</a></li>
-            <li class="active"><a href="#" onclick="page=2;">2</a></li>
-            <li><a href="#" onclick="page=3">3</a></li>
-            <li><a href="#" onclick="page=4">4</a></li>
-            <li><a href="#" onclick="page=5">5</a></li>
-        </ul>
-     </div>
+    include 'php/displayResults.php';
+
+    ?>
 </div>
 
-<?php
 
-include 'php/displayResults.php';
-
-?>
-
-<script>
-    var page=1;
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/sendQuery.js"></script>
 </body>

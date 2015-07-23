@@ -62,5 +62,7 @@ $conn->close();
 $json = json_encode($output);
 echo $json;
 
+include ('/php/displayPagination.php');
+include ('/php/displayData.php');
 
 exit();
