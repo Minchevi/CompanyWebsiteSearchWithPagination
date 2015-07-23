@@ -8,11 +8,11 @@ $json = json_decode($json);
             ?>
             <tr>
                 <td class="company-li">
-                    <div><?php echo $object->name; ?></div>
+                    <div><?php echo htmlspecialchars($object->name); ?></div>
                 </td>
                 <td>
-                    <a href="<?php echo $object->website; ?>" target="_blank">
-                        <div><?php echo $object->website; ?></div>
+                    <a href="<?php echo htmlspecialchars($object->website); ?>" target="_blank">
+                        <div><?php echo htmlspecialchars($object->website); ?></div>
                     </a>
                 </td>
             </tr>
