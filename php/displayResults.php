@@ -47,8 +47,25 @@ while(($row = $result->fetch_assoc())) {
     $output[]=$row;
 }
 
+$json = json_encode($output);
+
+// GET RESULTS COUNT BELOW
+
+$sqlCount = "SELECT count(*)
+        FROM companies
+        WHERE name like '%" . $query . "%'";
+
+$resultCount = $conn->query($sqlCount);
+$outputCount = array();
+
+
+while(($row = $resultCount->fetch_assoc())) {
+    $outputCount[]=$row;
+}
+
 $conn->close();
 
-$json = json_encode($output);
+$count= json_encode($outputCount);
+
 include 'php/displayData.php';
 include 'php/displayPagination.php';
