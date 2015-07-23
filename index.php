@@ -26,15 +26,16 @@
     </div>
 </div>
 
+<script>
+    var page=1;
+</script>
+
 <?php
 
 include 'php/displayResults.php';
 
 ?>
 
-<script>
-    var page=1;
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/sendQuery.js"></script>
 </body>
