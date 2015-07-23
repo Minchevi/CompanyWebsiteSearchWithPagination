@@ -10,7 +10,7 @@
     <title>Companies</title>
 </head>
 <body>
-<h1 class="text-center">Company website searching tool</h1>
+<h1 class="text-center"><a href="/" id="search-a">Company website searching tool</a></h1>
 <div class="container" id="search">
     <div class="row">
         <div id="custom-search-input">

@@ -38,6 +38,9 @@
 #search {
     margin-bottom: 20px;
 }
+#search-a:hover {
+    text-decoration:none;
+}
 
 .no-results-div {
     text-align: center;
