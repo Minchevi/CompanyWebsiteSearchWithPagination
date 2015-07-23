@@ -36,3 +36,17 @@
 .search-query:focus + button {
     z-index: 3;
 }
+
+.company-ul, #search {
+    max-width: 700px;
+}
+
+.company-ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.company-li {
+    margin: 5px;
+    font-size: 20px;
+}
