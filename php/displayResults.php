@@ -51,5 +51,4 @@ $conn->close();
 
 $json = json_encode($output);
 include 'php/displayData.php';
-
-exit();
+include 'php/displayPagination.php';

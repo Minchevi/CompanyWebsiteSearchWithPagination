@@ -1,16 +1,21 @@
 <?php
 $json = json_decode($json);
 ?>
-<<ul class="list-group" class="company-ul">>
+<table class="table table-hover" class="table-data">
     <?php
     foreach($json as $key=>$object){
         ?>
-        <li class="company-li">
-            <a href="<?php echo $object->website; ?>" target="_blank">
-                <div><?php echo $object->name; ?></div>
-            </a>
-        </li>
+        <tr>
+            <td class="company-li">
+                    <div><?php echo $object->name; ?></div>
+            </td>
+            <td>
+                <a href="<?php echo $object->website; ?>" target="_blank">
+                    <div><?php echo $object->website; ?></div>
+                </a>
+            </td>
+        </tr>
         <?php
     }
     ?>
-</ul>
+</table>

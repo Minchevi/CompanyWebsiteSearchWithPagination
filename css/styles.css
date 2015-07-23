@@ -1,7 +1,5 @@
 #custom-search-input {
-    margin:0;
     margin-top: 10px;
-    padding: 0;
 }
 
 #custom-search-input .search-query {
@@ -37,16 +35,6 @@
     z-index: 3;
 }
 
-.company-ul, #search {
-    max-width: 700px;
-}
-
-.company-ul {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.company-li {
-    margin: 5px;
-    font-size: 20px;
+#search {
+    margin-bottom: 20px;
 }
